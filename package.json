@@ -1,0 +1,31 @@
+{
+  "name": "react4setup",
+  "version": "1.0.0",
+  "description": "https://github.com/btholt/complete-intro-to-react-v4s https://btholt.github.io/complete-intro-to-react-v4/",
+  "main": "app.js",
+  "scripts": {
+    "format": "prettier --write \"src/*.{js,jsx,css,json}\"",
+    "format-check": "prettier --list-different \"src/*.{js,jsx,css,json}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squarewave24/react4setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/squarewave24/react4setup/issues"
+  },
+  "homepage": "https://github.com/squarewave24/react4setup#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.16.4"
+  }
+}
