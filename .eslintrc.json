@@ -8,7 +8,7 @@
     "prettier/react"
   ],
   "rules": {
-    "raect/prop-types": 0
+    "react/prop-types": 0
   },
   "plugins": ["react", "import", "jsx-a11y"],
   "parserOptions": {
