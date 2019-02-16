@@ -1,31 +1,20 @@
 import React from "react";
 import { render } from "react-dom";
-import { Pet } from "./Pet";
+import pf from "petfinder-client";
+import Pet from "./Pet";
+
+const petfinder = pf({
+  key: process.env.API_KEY,
+  secret: process.env.API_SECRET
+});
 
 class App extends React.Component {
-  handleTitleClick() {
-    alert("title");
+  componentDidMount() {
+    const promise = petfinder.breed.list({ animal: "dog" });
+
+    promise.then(console.log, console.error);
   }
-
   render() {
-    // return React.createElement("div", {}, [
-    //   React.createElement(
-    //     "h1",
-    //     { onClick: this.handleTitleClick },
-    //     "Adopt Me!"
-    //   ),
-    //   React.createElement(Pet, {
-    //     name: "Luna",
-    //     animal: "dog",
-    //     breed: "Havanese"
-    //   }),
-    //   React.createElement(Pet, {
-    //     name: "Pundit",
-    //     animal: "dog",
-    //     breed: "Havanese"
-    //   })
-    // ]);
-
     return (
       <div>
         <h1>ADopt me!</h1>
